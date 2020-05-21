@@ -1,0 +1,17 @@
+/* pages/gun_list/index.wxss */
+.l-item{
+  width: 100%;
+  padding: 16rpx;
+  box-sizing: border-box;
+  border-bottom: 2rpx solid #999;
+}
+.l-item>view{
+  padding: 8rpx 0 ;
+}
+.lefts{
+  left: 46rpx !important;
+}
+.right{
+  position: absolute;
+  right:46rpx !important;
+}

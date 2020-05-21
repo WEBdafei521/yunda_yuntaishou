@@ -1,0 +1,28 @@
+<!--pages/login/index.wxml-->
+<view>
+  <view class="header">
+		<image class="image" style="width:100vw;" src="../../static/login.jpg" mode="aspectFill"></image>
+	</view>
+
+  
+  <view class="form">
+    <view></view>
+     <!-- 登陆 -->
+    <button class="box animated bounceInDown bg-blue" disabled="{{hasTap}}" style="margin-top:164rpx;" open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber1"> 手机号一键登录 </button>
+  </view>
+  
+  <!-- 底部表示 -->
+  <view style="position: fixed;bottom:30rpx;width:100vw;">
+    <view class="my_display_col">
+      <!-- 标识 -->
+      <view class="my_padding_tb myFont_md" style="margin:0 auto;color:#999;">
+        郑州云飞扬信息技术有限公司
+      </view>
+      <view class="myFont_md my_padding_tb" style="font-weight:600;margin:0 auto;">
+        豫ICP备16021744号-3
+      </view>
+    </view>
+  </view>
+  
+ 
+</view>

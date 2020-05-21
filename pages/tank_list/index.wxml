@@ -1,0 +1,18 @@
+<!--pages/tank_list/index.wxml-->
+ <view class="cu-list menu menu-avatar"> 
+    <view class="cu-item box animated bounceIn" wx:for="{{list}}" wx:key="index">
+      <view class="content lefts">
+        <view>
+          <text class="text-cut">油罐号：{{item.id}}</text>
+        </view>
+        <view class="text-gray text-sm flex">
+          <text class="text-cut">剩余量：{{item.tankNum}} </text>
+        </view>
+      </view>
+      <view class="right">
+          <view class="text-green" wx:if="{{item.tankCapacityPercentage>80}}">{{item.tankCapacityPercentage}}%</view>
+          <view class="text-yellow" wx:if="{{item.tankCapacityPercentage >= 50}}">{{item.tankCapacityPercentage}}%</view>
+          <view class="text-red" wx:if="{{item.tankCapacityPercentage <50}}">{{item.tankCapacityPercentage}}%</view>
+      </view>
+    </view>
+  </view>

@@ -1,0 +1,23 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/user/index",
+    "pages/trade/index",
+    "pages/login/login",
+    "pages/sale_trend/index",
+    "pages/daily_report/index",
+    "pages/logs/logs",
+    "pages/trade_detail/index",
+    "pages/daily_report_list/index",
+    "pages/tank_list/index",
+    "pages/gun_list/index"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

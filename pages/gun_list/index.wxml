@@ -1,0 +1,15 @@
+<!--pages/gun_list/index.wxml-->
+ <view class="cu-list menu menu-avatar"> 
+    <view class="cu-item box animated bounceIn" wx:for="{{list}}" wx:key="index">
+      <view class="content lefts">
+        <view>
+          <text class="text-cut">枪号{{item.gunNo}}</text>
+        </view>
+      </view>
+      <view class="right">
+          <view class="text-green" wx:if="{{item.status1=='00'}}">挂枪</view>
+          <view class="text-yellow" wx:if="{{item.status1=='2'}}">加油</view>
+          <view class="text-red" wx:if="{{item.status1=='' || item.status1 ==null}}">未连接</view>
+      </view>
+    </view>
+  </view>

@@ -1,0 +1,75 @@
+/* pages/daily_report/index.wxss */
+.container1{
+  padding: 16rpx;
+  box-sizing: border-box;
+}
+swiper{
+  height: 600rpx;
+
+}
+.swiper-item{
+  margin: 0 8rpx;
+}
+.l-title{
+  background: #fff;
+  border-radius: 8rpx;
+  margin-top: 6rpx;
+}
+.l-title>view{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+.l-title button{
+  width: 150rpx !important;
+  background-image: linear-gradient(-20deg, #00cdac 0%, #8ddad5 100%);
+}
+.page-body{
+  /* background: #fff; */
+  border-radius: 8rpx;
+  overflow: hidden;
+}
+.page-body>view{
+  background: #fff;
+  margin-bottom: 16rpx;
+}
+ec-canvas {
+  width: 100%;
+  height: 300rpx;
+}
+.canvas_report{
+  width: 100%;
+  height: 700rpx;
+}
+.l-body-model{
+  background: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 36rpx 0;
+  
+}
+.l-body-model>view{
+  width: 50%;
+  height: 60rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 36rpx;
+  
+}
+.l-body-model>view:nth-child(odd){
+  border-right: 2rpx solid rgba(200,200,200,.4);
+  /* margin-bottom: 16rpx; */
+}
+.l-value{
+  color: rgb(32, 174, 209);
+  color: 36rpx;
+  font-weight: 600;
+}
+.l-trande-info{
+  color: rgb(130, 194, 253);
+  font-size: 24rpx;
+}

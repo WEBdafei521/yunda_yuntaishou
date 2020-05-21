@@ -1,0 +1,94 @@
+<!--index.wxml-->
+<view>
+  <view class="l-index-title">
+    <view class="my_display_col"> 
+      <view class="l-count">{{userinfo.sum_tradeMoney}}</view>
+      <view>今日收益</view>
+    </view>
+    <view class="l-item">
+      <view class="l-item-border">
+        <view class="l-title-value">{{userinfo.sum_qty}}</view>
+        <view>今天售出</view>
+      </view>
+      <view class="l-item-border">
+        <view class="l-title-value">{{userinfo.sum_unload_oil_num}}</view>
+        <view>今天进油</view>
+      </view>
+      <view>
+        <view class="l-title-value">{{userinfo.sum_tank_num}}</view>
+        <view>今日库存</view>
+      </view>
+    </view>
+  </view>
+  <view class="swiper-view">
+  <swiper class="swiper_container" vertical="true" autoplay="true" circular="true" interval="2000"  bindtap="gun_list">
+    <block wx:for="{{msgList}}">
+      <swiper-item>
+        <view class="swiper_item">
+          <view>油枪：{{item.gunNo}}</view>
+          <view class="text-green" wx:if="{{item.status1 == '00'}}">挂枪</view>
+          <view class="text-yellow" wx:if="{{item.status1 == '00'}}">加油</view>
+          <view class="text-red" wx:if="{{item.status1 == '' || item.status1 ==null}}">未连接</view>
+        </view>
+      </swiper-item>
+    </block>
+  </swiper>
+</view>
+  <!-- main -->
+  <view class="l-main">
+    <view class="l-main-circle-one">
+      <view class="l-main-circle-two my_display my_display_mid">
+        <view class="l-main-circle-three">
+          <view class="l-main-circle-four" bindtap="user">
+            <view style="font-size:72rpx">
+              <text class="cuIcon-people"></text> 
+            </view>
+            <view>我的</view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <!-- 整个模块 -->
+    <view class="">
+      <!-- 上两个 -->
+      <view class="l-main-top my_display my_display_spa">
+        <view bindtap="sale_trend">
+          <view class="l-main-top-nei">
+            <view style="font-size:48rpx">
+                <text class="cuIcon-rank"></text> 
+            </view>
+            <view>销势</view>
+          </view>
+        </view>
+
+        <view>
+          <view class="l-main-top-nei" bindtap="tradeList">
+            <view style="font-size:48rpx">
+                <text class="cuIcon-attention"></text> 
+            </view>
+            <view>交易列表</view>
+          </view>
+        </view>
+      </view>
+      <!-- 下两个 -->
+      <view class="l-main-bottom my_display my_display_spa" bindtap="tanKList">
+        <view>
+          <view class="l-main-top-nei">
+            <view style="font-size:48rpx">
+                <text class="cuIcon-deliver "></text> 
+            </view>
+            <view>油罐列表</view>
+          </view>
+        </view>
+        <view>
+          <view class="l-main-top-nei" bindtap="daily_report">
+            <view style="font-size:48rpx">
+                <text class="cuIcon-edit"></text>
+            </view>
+            <view>日报表</view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

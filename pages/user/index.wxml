@@ -1,0 +1,38 @@
+<!--pages/user/index.wxml-->
+<view class="">
+  <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+    <block wx:else>
+      <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+  </view>
+
+
+   <view class="cu-list menu card-menu margin-top-xl margin-bottom-xl shadow-lg radius">
+    <view class="cu-item" bindtap="myCar">
+      <button class="cu-btn content">
+        <text class="cuIcon-writefill text-cyan"></text>
+        <text class="text-grey">部门名称</text>
+      </button>
+      <view>{{depart.departname}}</view>
+    </view>
+
+    <view class="cu-item">
+      <button class="cu-btn content">
+        <text class="cuIcon-rankfill text-orange"></text>
+        <text class="text-grey">联系电话</text>
+      </button>
+      <view>{{user.username}}</view>
+    </view>
+
+    <view class="cu-item">
+      <button class="cu-btn content">
+        <text class="cuIcon-mail text-green"></text>
+        <text class="text-grey">邮箱地址</text>
+      </button>
+      <view>{{user.email}}1</view>
+    </view>
+
+  </view>
+</view>
